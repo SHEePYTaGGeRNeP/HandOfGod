@@ -31,42 +31,42 @@
             {
                 case 0:
                     ray = new UnityEngine.Ray(this.transform.position, this.transform.forward);
-#if UNITY_EDITOR
-                    UnityEngine.Debug.DrawRay(this.transform.position, this.transform.forward, UnityEngine.Color.cyan, 1f);
-#endif
-#if UNITY_EDITOR_64
-                    UnityEngine.Debug.DrawRay(this.transform.position, this.transform.forward, UnityEngine.Color.cyan, 1f);
-#endif
+//#if UNITY_EDITOR
+//                    UnityEngine.Debug.DrawRay(this.transform.position, this.transform.forward, UnityEngine.Color.cyan, 1f);
+//#endif
+//#if UNITY_EDITOR_64
+//                    UnityEngine.Debug.DrawRay(this.transform.position, this.transform.forward, UnityEngine.Color.cyan, 1f);
+//#endif
                     side = Side.Front;
                     break;
                 case 1:
                     ray = new UnityEngine.Ray(this.transform.position, this.transform.right);
-#if UNITY_EDITOR
-                    UnityEngine.Debug.DrawRay(this.transform.position, this.transform.right, UnityEngine.Color.cyan, 1f);
-#endif
-#if UNITY_EDITOR_64
-                    UnityEngine.Debug.DrawRay(this.transform.position, this.transform.forward, UnityEngine.Color.cyan, 1f);
-#endif
+//#if UNITY_EDITOR
+//                    UnityEngine.Debug.DrawRay(this.transform.position, this.transform.right, UnityEngine.Color.cyan, 1f);
+//#endif
+//#if UNITY_EDITOR_64
+//                    UnityEngine.Debug.DrawRay(this.transform.position, this.transform.forward, UnityEngine.Color.cyan, 1f);
+//#endif
                     side = Side.Right;
                     break;
                 case 2:
                     ray = new UnityEngine.Ray(this.transform.position, -this.transform.forward);
-#if UNITY_EDITOR
-                    UnityEngine.Debug.DrawRay(this.transform.position, -this.transform.forward, UnityEngine.Color.cyan, 1f);
-#endif
-#if UNITY_EDITOR_64
-                    UnityEngine.Debug.DrawRay(this.transform.position, this.transform.forward, UnityEngine.Color.cyan, 1f);
-#endif
+//#if UNITY_EDITOR
+//                    UnityEngine.Debug.DrawRay(this.transform.position, -this.transform.forward, UnityEngine.Color.cyan, 1f);
+//#endif
+//#if UNITY_EDITOR_64
+//                    UnityEngine.Debug.DrawRay(this.transform.position, this.transform.forward, UnityEngine.Color.cyan, 1f);
+//#endif
                     side = Side.Back;
                     break;
                 case 3:
                     ray = new UnityEngine.Ray(this.transform.position, -this.transform.right);
-#if UNITY_EDITOR
-                    UnityEngine.Debug.DrawRay(this.transform.position, -this.transform.right, UnityEngine.Color.cyan, 1f);
-#endif
-#if UNITY_EDITOR_64
-                    UnityEngine.Debug.DrawRay(this.transform.position, this.transform.forward, UnityEngine.Color.cyan,1f);
-#endif
+//#if UNITY_EDITOR
+//                    UnityEngine.Debug.DrawRay(this.transform.position, -this.transform.right, UnityEngine.Color.cyan, 1f);
+//#endif
+//#if UNITY_EDITOR_64
+//                    UnityEngine.Debug.DrawRay(this.transform.position, this.transform.forward, UnityEngine.Color.cyan,1f);
+//#endif
                     side = Side.Left;
                     break;
                 default:

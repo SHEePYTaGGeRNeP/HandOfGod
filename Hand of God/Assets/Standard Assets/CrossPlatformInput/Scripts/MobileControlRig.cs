@@ -3,7 +3,13 @@
 
 namespace Assets.Standard_Assets.CrossPlatformInput.Scripts
 {
+
+#if UNITY_EDITOR
     using UnityEditor;
+#endif
+#if UNITY_EDITOR_64
+    using UnityEditor;
+#endif
 
     using UnityEngine;
 

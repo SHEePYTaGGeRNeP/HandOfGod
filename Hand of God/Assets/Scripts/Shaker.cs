@@ -6,27 +6,35 @@
 
     using UnityEngine;
 
+    internal class IterateCube
+    {
+        public Cube Cube { get; set; }
+        public int Distance { get; set; }
+        
+        public IterateCube(Cube pCube, int pDistance)
+        {
+            this.Cube = pCube;
+            this.Distance = pDistance;
+        }
+    }
+
     internal class Shaker
     {
         public static Shaker Instance = new Shaker();
 
         private readonly HashSet<Cube> _iteratedCubes = new HashSet<Cube>();
-
-        private readonly HashSet<Cube> _toIterateCubes = new HashSet<Cube>();
-        //    this._toIterateCubes.Clear();
-        //    this._toIterateCubes.Add(cube);
-        //    int distance = 0;
-        //    while (this._toIterateCubes.Count > 0)
-        //    {
-        //        this.Shake(cube, distance);
-        //        distance += 5;
-        //    }
-        //        this._toIterateCubes.Add(cubeChild);
+        private readonly Queue<IterateCube> _toIterateCubes = new Queue<IterateCube>();
 
         public void StartShake(Cube cube)
         {
             this._iteratedCubes.Clear();
-            this.Shake(cube, 0);
+            this._toIterateCubes.Clear();
+            this._toIterateCubes.Enqueue(new IterateCube(cube, 0));
+            while (this._toIterateCubes.Count > 0)
+            {
+                IterateCube itCube = this._toIterateCubes.Dequeue();
+                this.Shake(itCube.Cube, itCube.Distance);
+            }
         }
 
         public void Shake(Cube cube, int distance)
@@ -42,12 +50,12 @@
                 distance = 0;
 
 
-            cube.transform.GetComponent<MeshRenderer>().materials[0].color = Color.magenta;
+            cube.transform.GetComponent<MeshRenderer>().materials[0].color = Color.green;
             int result = Random.Range(1, 101);
             if (result <= distance)
                 return;
             cube.transform.GetComponent<Rigidbody>().isKinematic = false;
-            cube.transform.GetComponent<MeshRenderer>().materials[0].color = Color.green;
+            cube.transform.GetComponent<MeshRenderer>().materials[0].color = Color.magenta;
 
             if (Random.Range(1, 4) > 1)
             {
@@ -55,7 +63,7 @@
                 cube.transform.GetComponent<MeshRenderer>().materials[0].color = Color.red;
             }
             foreach (Cube cubeChild in cube.ConnectedCubes.Values)
-                this.Shake(cubeChild, distance += 5);
+                this._toIterateCubes.Enqueue(new IterateCube(cubeChild, distance + 5));//  this.Shake(cubeChild, distance + 5);
         }
     }
 }

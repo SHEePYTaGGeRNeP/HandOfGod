@@ -11,8 +11,10 @@
     class Player : MonoBehaviour
     {
         [SerializeField]
-        private Text PointsText;
+        private Text _pointsText;
 
+        [SerializeField]
+        private Text _RIPText;
         public bool IsDead = false;
 
 
@@ -22,13 +24,14 @@
             if (this.IsDead) return;
             if (this.transform.position.y < MapGenerator.Instance.transform.position.y - 20f)
                 this.Kill();
-            this.PointsText.text = Time.timeSinceLevelLoad.ToString(CultureInfo.InvariantCulture);
+            this._pointsText.text = Time.timeSinceLevelLoad.ToString(CultureInfo.InvariantCulture);
         }
 
         public void Kill()
         {
             this.GetComponent<FirstPersonController>().m_WalkSpeed = 0f;
             this.GetComponent<FirstPersonController>().m_RunSpeed = 0f;
+            this._RIPText.text = "R.I.P.";
             this.IsDead = true;
         }
     }
