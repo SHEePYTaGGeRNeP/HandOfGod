@@ -11,19 +11,22 @@
         public static Shaker Instance = new Shaker();
 
         private readonly HashSet<Cube> _iteratedCubes = new HashSet<Cube>();
+
         private readonly HashSet<Cube> _toIterateCubes = new HashSet<Cube>();
+        //    this._toIterateCubes.Clear();
+        //    this._toIterateCubes.Add(cube);
+        //    int distance = 0;
+        //    while (this._toIterateCubes.Count > 0)
+        //    {
+        //        this.Shake(cube, distance);
+        //        distance += 5;
+        //    }
+        //        this._toIterateCubes.Add(cubeChild);
 
         public void StartShake(Cube cube)
         {
-            this._toIterateCubes.Clear();
             this._iteratedCubes.Clear();
-            this._toIterateCubes.Add(cube);
-            int distance = 0;
-            while (this._toIterateCubes.Count > 0)
-            {
-                this.Shake(cube, distance);
-                distance += 5;
-            }
+            this.Shake(cube, 0);
         }
 
         public void Shake(Cube cube, int distance)
@@ -52,7 +55,7 @@
                 cube.transform.GetComponent<MeshRenderer>().materials[0].color = Color.red;
             }
             foreach (Cube cubeChild in cube.ConnectedCubes.Values)
-                this._toIterateCubes.Add(cubeChild);
+                this.Shake(cubeChild, distance += 5);
         }
     }
 }
