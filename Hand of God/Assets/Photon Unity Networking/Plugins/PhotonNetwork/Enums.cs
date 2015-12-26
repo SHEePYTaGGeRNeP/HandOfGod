@@ -470,7 +470,7 @@ public enum CloudRegionCode
 /// <summary>
 /// Available regions as enum of flags. To be used as "enabled" flags for Best Region pinging.
 /// </summary>
-/// <remarks>Note that these enum values skip CloudRegionCode.none and their values are in strict order (power of 2).</remarks>
+/// <remarks>Note that these enum values skip CloudRegionCode.none and their values are in strict order (_POWER of 2).</remarks>
 [Flags]
 public enum CloudRegionFlag
 {
