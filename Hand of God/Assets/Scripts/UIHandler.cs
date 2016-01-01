@@ -2,7 +2,7 @@
 {
     using UnityEngine;
 
-    class UIHandler : MonoBehaviour
+    internal class UIHandler : MonoBehaviour
     {
 
         public void ReloadLevel()

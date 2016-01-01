@@ -2,35 +2,34 @@
 {
     using System;
 
-    using Assets.Scripts.PhotonNetworking;
-
     using global::Photon;
 
     using UnityEngine;
 
-    class PhotonManager : PunBehaviour
+    internal class PhotonManager : PunBehaviour
     {
         public static PhotonManager Instance;       
         
-        public bool Host;
+        public bool Host { get; private set; }
         
 
         public event EventHandler OnJoinedRoomEvent;
-
-        private LobbiesManager _lobbiesManager;
+        
 
         private bool _aPlayerHasJoined;
 
 
         private void Awake()
         {
-            Instance = this;
-        }
-
-        private void Start()
-        {
+            if (Instance == null)
+                Instance = this;
             PhotonNetwork.logLevel = PhotonLogLevel.Informational;
             PhotonNetwork.ConnectUsingSettings("0.1");
+        }
+        
+        public void CreateRoom(string roomname, int maxPlayers)
+        {
+            
         }
 
         private void OnGUI()
@@ -40,16 +39,7 @@
 
         public override void OnConnectedToMaster()
         {
-            // when AutoJoinLobby is off, this method gets called when PUN finished the connection (instead of OnJoinedLobby())
-            if (this._lobbiesManager == null)
-            {
-                Debug.Log("Joining random room!");
-                PhotonNetwork.JoinRandomRoom();
-            }
-            else
-            {
-                this._lobbiesManager.StartUpdating();
-            }
+            
         }
 
         public void CreateRoom(string roomname)
