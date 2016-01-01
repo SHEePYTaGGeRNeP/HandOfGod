@@ -2,6 +2,7 @@
 {
     using System;
     using System.Globalization;
+    using System.Linq;
 
     using UnityEngine;
     using UnityEngine.UI;
@@ -10,9 +11,7 @@
     {
 
         [SerializeField]
-        private GameObject _roomElementPrefab;
-        [SerializeField]
-        private Transform _contentTransform;
+        private Dropdown _roomsDropdown;
         [SerializeField]
         private InputField _roomNameField;
         [SerializeField]
@@ -25,15 +24,13 @@
             PhotonManager.Instance.OnReceivedRoomListUpdateEvent +=
                 delegate
                     {
-                        this.PopulateServerList();
+                        //this.PopulateServerList();
                     };
         }
 
         public void Refresh()
         {
-            Helper.Log("LobbiesManager", "Inside lobby: " + PhotonNetwork.insideLobby.ToString());
-            //if (!PhotonNetwork.inRoom)
-            //    PhotonNetwork.CreateRoom(null);
+            Helper.Log("LobbiesManager", "Inside lobby: " + PhotonNetwork.insideLobby);
             this.PopulateServerList();
         }
 
@@ -42,27 +39,65 @@
             this._maxPlayersText.text = this._maxPlayersSlider.value.ToString(CultureInfo.InvariantCulture);
         }
 
+        public void JoinGameButtonClicked()
+        {
+            bool join = true;
+            RoomInfo[] rooms = PhotonNetwork.GetRoomList();
+            RoomInfo room = null;
+            if (rooms == null || rooms.Length == 0)
+                join = false;
+            else
+                foreach (RoomInfo ro in rooms.Where(ro => ro.name == this._roomsDropdown.captionText.text))
+                {
+                    room = ro;
+                    break;
+                }
+
+            if (room == null)
+            {
+                Debug.LogError("LobbiesManager: Room does not exist.");
+                join = false;
+            }
+            else if (room.open)
+            {
+                Debug.LogError("LobbiesManager: Room is not open.");
+                join = false;
+            }
+            else if (room.playerCount >= room.maxPlayers)
+            {
+                Debug.LogError("LobbiesManager: Room is full.");
+                join = false;
+            }
+            if (join)
+                PhotonNetwork.JoinRoom(room.name);
+            else
+                this.PopulateServerList();
+        }
+
         public void PopulateServerList()
         {
+            this._roomsDropdown.options.Clear();
+            this._roomsDropdown.options.Add(new Dropdown.OptionData(String.Empty));
+            this._roomsDropdown.captionText.text = String.Empty;
+
             RoomInfo[] rooms = PhotonNetwork.GetRoomList();
-            Helper.Log("LobbiesManager", rooms.Length.ToString());
+            Helper.Log("LobbiesManager", "Amount of rooms: " + rooms.Length);
             for (int i = 0; i < rooms.Length; i++)
             {
                 if (!rooms[i].open)
                     continue;
+                this._roomsDropdown.options.Add(new Dropdown.OptionData(rooms[i].ToStringInGame()));
 
-                GameObject roomElement = Instantiate(this._roomElementPrefab);
-                roomElement.transform.SetParent(this._contentTransform);
-                roomElement.transform.position = new Vector3(4, i * 61 + 1, 0);
-                roomElement.transform.FindChild("RoomTitleText").GetComponent<Text>().text = rooms[i].name;
-                roomElement.transform.FindChild("AmountOfPlayersText").GetComponent<Text>().text = rooms[i].playerCount + "/" + rooms[i].maxPlayers;
-                
             }
         }
 
         public void CreateRoomButtonClick()
         {
-           //PhotonManager.Instance.CreateRoom(
+            if (String.IsNullOrEmpty(this._roomNameField.text.Trim()))
+                return;
+
+            PhotonManager.Instance.CreateRoom(this._roomNameField.text, (int)this._maxPlayersSlider.value);
+            Application.LoadLevel("GameScene");
         }
 
     }

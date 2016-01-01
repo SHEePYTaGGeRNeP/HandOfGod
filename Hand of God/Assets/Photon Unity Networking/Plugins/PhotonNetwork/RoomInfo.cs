@@ -163,6 +163,11 @@ public class RoomInfo
         return this.nameField.GetHashCode();
     }
 
+    public string ToStringInGame()
+    {
+        return string.Format("{0} {1}, {2}/{3} players.", this.nameField, this.openField ? "open" : "closed", this.playerCount, this.maxPlayers);
+    }
+
     /// <summary>Simple printingin method.</summary>
     /// <returns>Summary of this RoomInfo instance.</returns>
     public override string ToString()
