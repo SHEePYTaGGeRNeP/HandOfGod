@@ -2,11 +2,11 @@ Mono path[0] = 'E:/GITHUB/HandOfGod/Hand of God/Builds/Windows/HandOfGod_Data/Ma
 Mono path[1] = 'E:/GITHUB/HandOfGod/Hand of God/Builds/Windows/HandOfGod_Data/Mono'
 Mono config path = 'E:/GITHUB/HandOfGod/Hand of God/Builds/Windows/HandOfGod_Data/Mono/etc'
 PlayerConnection initialized from E:/GITHUB/HandOfGod/Hand of God/Builds/Windows/HandOfGod_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55423
-Multi-casting "[IP] 192.168.192.10 [Port] 55423 [Flags] 3 [Guid] 3741279416 [EditorId] 903922320 [Version] 1048832 [Id] WindowsPlayer(Lorenzo-PC) [Debug] 0" to [225.0.0.222:54997]...
-Waiting for connection from host on [192.168.192.10:55423]...
-PlayerConnection accepted from [192.168.192.10] handle:0x288
-PlayerConnection already initialized - listening to [192.168.192.10:55423]
+PlayerConnection initialized network socket : 0.0.0.0 55041
+Multi-casting "[IP] 192.168.192.10 [Port] 55041 [Flags] 3 [Guid] 1088774587 [EditorId] 2881200772 [Version] 1048832 [Id] WindowsPlayer(Lorenzo-PC) [Debug] 0" to [225.0.0.222:54997]...
+Waiting for connection from host on [192.168.192.10:55041]...
+PlayerConnection accepted from [192.168.192.10] handle:0x280
+PlayerConnection already initialized - listening to [192.168.192.10:55041]
 Initialize engine version: 5.2.3f1 (f3d16a1fa2dd)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -28,238 +28,320 @@ Loading E:\GITHUB\HandOfGod\Hand of God\Builds\Windows\HandOfGod_Data\Managed\Un
 Platform assembly: E:\GITHUB\HandOfGod\Hand of God\Builds\Windows\HandOfGod_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading E:\GITHUB\HandOfGod\Hand of God\Builds\Windows\HandOfGod_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
 Platform assembly: E:\GITHUB\HandOfGod\Hand of God\Builds\Windows\HandOfGod_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.168 seconds
+- Completed reload, in  0.145 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x2160 at -1920,-1080
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: E:\GITHUB\HandOfGod\Hand of God\Builds\Windows\HandOfGod_Data\Managed\System.dll (this message is harmless)
-Finished generating
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Assets.Scripts.MapGeneration.MapGenerator:StartGenerating(Int32) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\MapGeneration\MapGenerator.cs:40)
-Assets.Scripts.MapGeneration.MapGenerator:Awake() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\MapGeneration\MapGenerator.cs:24)
- 
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/MapGeneration/MapGenerator.cs Line: 40)
-
-Finished setting connected cubes
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Assets.Scripts.MapGeneration.MapGenerator:StartGenerating(Int32) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\MapGeneration\MapGenerator.cs:43)
-Assets.Scripts.MapGeneration.MapGenerator:Awake() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\MapGeneration\MapGenerator.cs:24)
- 
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/MapGeneration/MapGenerator.cs Line: 43)
-
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 89c -> priority: 1 
-Shaking...
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
- 
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
+  Thread -> id: dd4 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.159631 ms
+System memory in use before: 81.7 MB.
+System memory in use after: 81.7 MB.
 
-Done shaking
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
- 
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 651.
+Total: 0.525852 ms (FindLiveObjects: 0.029816 ms CreateObjectMapping: 0.020479 ms MarkObjects: 0.454774 ms  DeleteObjects: 0.020178 ms)
 
-Shaking...
+OnStatusChanged: Connect
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
+NetworkingPeer:OnStatusChanged(StatusCode) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1529)
+ExitGames.Client.Photon.PeerBase:InitCallback()
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1529)
 
-Done shaking
+OnStatusChanged: EncryptionEstablished
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
+NetworkingPeer:OnStatusChanged(StatusCode) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1529)
+ExitGames.Client.Photon.<>c__DisplayClass6:<EnqueueStatusCallback>b__4()
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1529)
 
-Shaking...
+OperationResponse 230: ReturnCode: 0.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
+NetworkingPeer:OnOperationResponse(OperationResponse) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1139)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1139)
 
-Done shaking
+OnStatusChanged: Disconnect
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
+NetworkingPeer:OnStatusChanged(StatusCode) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1529)
+ExitGames.Client.Photon.EnetPeer:Disconnect()
+ExitGames.Client.Photon.PhotonPeer:Disconnect()
+NetworkingPeer:DisconnectToReconnect() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:484)
+NetworkingPeer:OnOperationResponse(OperationResponse) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1230)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1529)
 
-Shaking...
+OnStatusChanged: Connect
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
+NetworkingPeer:OnStatusChanged(StatusCode) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1529)
+ExitGames.Client.Photon.PeerBase:InitCallback()
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1529)
 
-Done shaking
+OnStatusChanged: EncryptionEstablished
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
+NetworkingPeer:OnStatusChanged(StatusCode) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1529)
+ExitGames.Client.Photon.<>c__DisplayClass6:<EnqueueStatusCallback>b__4()
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1529)
 
-Shaking...
+OnEvent: Event 226.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
+NetworkingPeer:OnEvent(EventData) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1759)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1759)
 
-Done shaking
+OperationResponse 230: ReturnCode: 0.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
+NetworkingPeer:OnOperationResponse(OperationResponse) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1139)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1139)
 
-Shaking...
+OperationResponse 229: ReturnCode: 0.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
+NetworkingPeer:OnOperationResponse(OperationResponse) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1139)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1139)
 
-Done shaking
+<color=teal>PhotonManager:</color> OnJoinedLobby
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
+Assets.Scripts.Helper:Log(String, String) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\Helper.cs:10)
+Assets.Scripts.Photon.PhotonManager:OnJoinedLobby() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\Photon\PhotonManager.cs:63)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:2113)
+NetworkingPeer:OnOperationResponse(OperationResponse) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1411)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/Helper.cs Line: 10)
 
-Shaking...
+OnEvent: Event 230.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
+NetworkingPeer:OnEvent(EventData) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1759)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1759)
 
-Done shaking
+<color=teal>LobbiesManager:</color> 0
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
+Assets.Scripts.Helper:Log(String, String) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\Helper.cs:10)
+Assets.Scripts.Photon.LobbiesManager:PopulateServerList() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\Photon\LobbiesManager.cs:48)
+Assets.Scripts.Photon.LobbiesManager:<Start>m__6(Object, EventArgs) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\Photon\LobbiesManager.cs:28)
+Assets.Scripts.Photon.PhotonManager:OnReceivedRoomListUpdate() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\Photon\PhotonManager.cs:50)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:2113)
+NetworkingPeer:OnEvent(EventData) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1851)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/Helper.cs Line: 10)
 
-Shaking...
+<color=teal>LobbiesManager:</color> Inside lobby: True
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
+Assets.Scripts.Helper:Log(String, String) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\Helper.cs:10)
+Assets.Scripts.Photon.LobbiesManager:Refresh() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\Photon\LobbiesManager.cs:34)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:149)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:626)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:766)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:54)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
+UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:52)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:269)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:378)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:277)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:265)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:179)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:277)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/Helper.cs Line: 10)
 
-Done shaking
+<color=teal>LobbiesManager:</color> 0
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
+Assets.Scripts.Helper:Log(String, String) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\Helper.cs:10)
+Assets.Scripts.Photon.LobbiesManager:PopulateServerList() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\Photon\LobbiesManager.cs:48)
+Assets.Scripts.Photon.LobbiesManager:Refresh() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\Photon\LobbiesManager.cs:37)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:149)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:626)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:766)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:54)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
+UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:52)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:269)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:378)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:277)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:265)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:179)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:277)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/Helper.cs Line: 10)
 
-Shaking...
+OperationResponse 227: ReturnCode: 0.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
+NetworkingPeer:OnOperationResponse(OperationResponse) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1139)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1139)
 
-Done shaking
+OnStatusChanged: Disconnect
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
+NetworkingPeer:OnStatusChanged(StatusCode) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1529)
+ExitGames.Client.Photon.EnetPeer:Disconnect()
+ExitGames.Client.Photon.PhotonPeer:Disconnect()
+NetworkingPeer:DisconnectToReconnect() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:488)
+NetworkingPeer:OnOperationResponse(OperationResponse) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1351)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1529)
 
-Shaking...
+OnStatusChanged: Connect
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
+NetworkingPeer:OnStatusChanged(StatusCode) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1529)
+ExitGames.Client.Photon.PeerBase:InitCallback()
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1529)
 
-Done shaking
+OnStatusChanged: EncryptionEstablished
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
+NetworkingPeer:OnStatusChanged(StatusCode) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1529)
+ExitGames.Client.Photon.<>c__DisplayClass6:<EnqueueStatusCallback>b__4()
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1529)
 
-Shaking...
+OperationResponse 230: ReturnCode: 0.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
+NetworkingPeer:OnOperationResponse(OperationResponse) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1139)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1139)
 
-Done shaking
+OperationResponse 227: ReturnCode: 0.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
+NetworkingPeer:OnOperationResponse(OperationResponse) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1139)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1139)
 
-Shaking...
+OnEvent: Event 255.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
+NetworkingPeer:OnEvent(EventData) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1759)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1759)
 
-Done shaking
+<color=teal>PhotonManager:</color> OnJoinedRoom : You have joined room : a539bfdb-75d2-406e-bf02-6386086b3fc7
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
+Assets.Scripts.Helper:Log(String, String) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\Helper.cs:10)
+Assets.Scripts.Photon.PhotonManager:OnJoinedRoom() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\Photon\PhotonManager.cs:77)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:2113)
+NetworkingPeer:OnEvent(EventData) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1914)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/Helper.cs Line: 10)
 
-Shaking...
+OnStatusChanged: Disconnect
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
+NetworkingPeer:OnStatusChanged(StatusCode) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1529)
+ExitGames.Client.Photon.EnetPeer:Disconnect()
+ExitGames.Client.Photon.PhotonPeer:Disconnect()
+NetworkingPeer:Disconnect() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:468)
+PhotonNetwork:Disconnect() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:1486)
+PhotonHandler:OnApplicationQuit() (at E:\GITHUB\HandOfGod\Hand of God\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:60)
  
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
-
-Done shaking
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
- 
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
-
-Shaking...
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
- 
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
-
-Done shaking
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
- 
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
-
-Shaking...
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:51)
- 
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 51)
-
-Done shaking
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Assets.Scripts.HandOfGod:OnCollisionEnter(Collision) (at E:\GITHUB\HandOfGod\Hand of God\Assets\Scripts\HandOfGod.cs:54)
- 
-(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Scripts/HandOfGod.cs Line: 54)
+(Filename: E:/GITHUB/HandOfGod/Hand of God/Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs Line: 1529)
 
 Waiting for finish

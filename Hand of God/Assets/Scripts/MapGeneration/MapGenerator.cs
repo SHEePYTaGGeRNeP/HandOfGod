@@ -37,10 +37,10 @@
                     cube.transform.SetParent(this.transform);
                     this._cubes.Add(cube.GetComponent<Cube>());
                 }
-            Debug.Log("Finished generating");
+            Helper.Log("MapGenerator", "Finished generating");
             foreach (ICube cube in this._cubes)
                 cube.SetConnectedCubes();
-            Debug.Log("Finished setting connected cubes");
+            Helper.Log("MapGenerator", "Finished setting connected cubes");
         }
 
         private bool GenerateWall(float posX, float posZ)

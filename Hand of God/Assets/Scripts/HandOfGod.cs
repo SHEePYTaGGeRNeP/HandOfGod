@@ -48,10 +48,10 @@
             Debug.DrawRay(this.transform.position, ray.direction * 5, Color.yellow, 20f);
 
 
-            Debug.Log("Shaking...");
+            Helper.Log("HandOfGod", "Shaking...");
             Shaker.Instance.StartShake(cube);
             this.transform.GetComponent<Rigidbody>().AddExplosionForce(this._POWER, this.transform.position, this._RADIUS);
-            Debug.Log("Done shaking");
+            Helper.Log("HandOfGod", "Done shaking");
             this.Invoke("Respawn", 2f);
         }
 
