@@ -30,7 +30,7 @@
 
         public void Refresh()
         {
-            Helper.Log("LobbiesManager", "Inside lobby: " + PhotonNetwork.insideLobby);
+            LogHelper.Log(typeof(LobbiesManager), "Inside lobby: " + PhotonNetwork.insideLobby);
             this.PopulateServerList();
         }
 
@@ -81,7 +81,7 @@
             this._roomsDropdown.captionText.text = String.Empty;
 
             RoomInfo[] rooms = PhotonNetwork.GetRoomList();
-            Helper.Log("LobbiesManager", "Amount of rooms: " + rooms.Length);
+            LogHelper.Log(typeof(LobbiesManager), "Amount of rooms: " + rooms.Length);
             for (int i = 0; i < rooms.Length; i++)
             {
                 if (!rooms[i].open)

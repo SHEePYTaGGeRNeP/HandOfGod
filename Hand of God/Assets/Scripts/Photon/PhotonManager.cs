@@ -52,7 +52,7 @@
 
         public void CreateRoom(string roomname, int maxPlayers)
         {
-            Helper.Log("PhotonManager","Creating room " + roomname);
+            LogHelper.Log(typeof(PhotonManager),"Creating room " + roomname);
             this.Host = true;
             RoomOptions ro = new RoomOptions() { isVisible = true, maxPlayers = 5 };
             PhotonNetwork.CreateRoom(roomname, ro, TypedLobby.Default);
@@ -60,21 +60,21 @@
 
         public override void OnJoinedLobby()
         {
-            Helper.Log("PhotonManager" ,"OnJoinedLobby");// Joining random room!");
+            LogHelper.Log(typeof(PhotonManager),"OnJoinedLobby");// Joining random room!");
             //PhotonNetwork.JoinRandomRoom();
         }
 
         // ReSharper disable once UnusedMember.Local
         private void OnPhotonRandomJoinFailed()
         {
-            Helper.Log("PhotonManager","OnPhotonRandomJoinFailed Can't join random room - Creating room");
+            LogHelper.Log(typeof(PhotonManager), "OnPhotonRandomJoinFailed Can't join random room - Creating room");
             this.Host = true;
             PhotonNetwork.CreateRoom(null);
         }
 
         public override void OnJoinedRoom()
         {
-            Helper.Log("PhotonManager", "OnJoinedRoom : You have joined room : " + PhotonNetwork.room.name);
+            LogHelper.Log(typeof(PhotonManager), "OnJoinedRoom : You have joined room : " + PhotonNetwork.room.name);
             if (PhotonNetwork.isMasterClient)
             {
                 //PhotonNetwork.Instantiate("AI_Boat_Mobile_Roeien", this.transform.position - new Vector3(0, 0, 10f), Quaternion.identity, 0);
@@ -89,7 +89,7 @@
 
         public override void OnPhotonPlayerConnected(PhotonPlayer player)
         {
-            Helper.Log("PhotonManager", "Player connected");
+            LogHelper.Log(typeof(PhotonManager), "Player connected");
             if (!PhotonNetwork.isMasterClient) return;
             
             
