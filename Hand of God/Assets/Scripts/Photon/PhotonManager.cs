@@ -1,101 +1,102 @@
-﻿namespace Assets.Scripts.Photon
-{
-    using System;
+﻿//namespace Assets.Scripts.Photon
+//{
+//    using System;
 
-    using global::Photon;
+//    using global::Photon;
+    
 
-    using UnityEngine;
+//    using UnityEngine;
 
-    internal class PhotonManager : PunBehaviour
-    {
-        public static PhotonManager Instance;       
-        
-        public bool Host { get; private set; }
-        
+//    internal class PhotonManager : PunBehaviour
+//    {
+//        public static PhotonManager Instance;
 
-        public event EventHandler OnJoinedRoomEvent;
-
-        public event EventHandler OnReceivedRoomListUpdateEvent;
+//        public bool Host { get; private set; }
 
 
+//        public event EventHandler OnJoinedRoomEvent;
 
-        private bool _aPlayerHasJoined;
+//        public event EventHandler OnReceivedRoomListUpdateEvent;
 
 
-        // ReSharper disable once UnusedMember.Local
-        private void Awake()
-        {
-            if (Instance == null)
-                Instance = this;
-            PhotonNetwork.logLevel = PhotonLogLevel.Informational;
-            PhotonNetwork.ConnectUsingSettings("0.1");
-        }
 
-        // ReSharper disable once UnusedMember.Local
-        private void OnGUI()
-        {
-            GUILayout.BeginArea(new Rect(new Vector2(10, 100), new Vector2(300, 200)));
-            GUILayout.Label(PhotonNetwork.connectionStateDetailed.ToString());
-            GUILayout.EndArea();
-        }
+//        private bool _aPlayerHasJoined;
 
-        public override void OnConnectedToMaster()
-        {
-            PhotonNetwork.JoinLobby();
-        }
 
-        public override void OnReceivedRoomListUpdate()
-        {            
-            if (this.OnReceivedRoomListUpdateEvent != null)
-                this.OnReceivedRoomListUpdateEvent.Invoke(null, null);
-        }
+//        // ReSharper disable once UnusedMember.Local
+//        //private void Awake()
+//        //{
+//        //    if (Instance == null)
+//        //        Instance = this;
+//        //    PhotonNetwork.logLevel = PhotonLogLevel.Informational;
+//        //    PhotonNetwork.ConnectUsingSettings("0.1");
+//        //}
 
-        public void CreateRoom(string roomname, int maxPlayers)
-        {
-            LogHelper.Log(typeof(PhotonManager),"Creating room " + roomname);
-            this.Host = true;
-            RoomOptions ro = new RoomOptions() { isVisible = true, maxPlayers = 5 };
-            PhotonNetwork.CreateRoom(roomname, ro, TypedLobby.Default);
-        }
+//        //ReSharper disable once UnusedMember.Local
+//        //private void OnGUI()
+//        //{
+//        //    GUILayout.BeginArea(new Rect(new Vector2(10, 100), new Vector2(300, 200)));
+//        //    GUILayout.Label(PhotonNetwork.connectionStateDetailed.ToString());
+//        //    GUILayout.EndArea();
+//        //}
 
-        public override void OnJoinedLobby()
-        {
-            LogHelper.Log(typeof(PhotonManager),"OnJoinedLobby");// Joining random room!");
-            //PhotonNetwork.JoinRandomRoom();
-        }
+//        //public override void OnConnectedToMaster()
+//        //{
+//        //    PhotonNetwork.JoinLobby();
+//        //}
 
-        // ReSharper disable once UnusedMember.Local
-        private void OnPhotonRandomJoinFailed()
-        {
-            LogHelper.Log(typeof(PhotonManager), "OnPhotonRandomJoinFailed Can't join random room - Creating room");
-            this.Host = true;
-            PhotonNetwork.CreateRoom(null);
-        }
+//        //public override void OnReceivedRoomListUpdate()
+//        //{
+//        //    if (this.OnReceivedRoomListUpdateEvent != null)
+//        //        this.OnReceivedRoomListUpdateEvent.Invoke(null, null);
+//        //}
 
-        public override void OnJoinedRoom()
-        {
-            LogHelper.Log(typeof(PhotonManager), "OnJoinedRoom : You have joined room : " + PhotonNetwork.room.name);
-            if (PhotonNetwork.isMasterClient)
-            {
-                //PhotonNetwork.Instantiate("AI_Boat_Mobile_Roeien", this.transform.position - new Vector3(0, 0, 10f), Quaternion.identity, 0);
-            }
+//        //public void CreateRoom(string roomname, int maxPlayers)
+//        //{
+//        //    LogHelper.Log(typeof(PhotonManager), "Creating room " + roomname);
+//        //    this.Host = true;
+//        //    RoomOptions ro = new RoomOptions() { isVisible = true, maxPlayers = 5 };
+//        //    PhotonNetwork.CreateRoom(roomname, ro, TypedLobby.Default);
+//        //}
 
-            EventHandler handler = this.OnJoinedRoomEvent;
-            if (handler != null)
-            {
-                handler(this, EventArgs.Empty);
-            }
-        }
+//        //public override void OnJoinedLobby()
+//        //{
+//        //    LogHelper.Log(typeof(PhotonManager), "OnJoinedLobby");// Joining random room!");
+//        //    PhotonNetwork.JoinRandomRoom();
+//        //}
 
-        public override void OnPhotonPlayerConnected(PhotonPlayer player)
-        {
-            LogHelper.Log(typeof(PhotonManager), "Player connected");
-            if (!PhotonNetwork.isMasterClient) return;
-            
-            
+//        //ReSharper disable once UnusedMember.Local
+//        //private void OnPhotonRandomJoinFailed()
+//        //{
+//        //    LogHelper.Log(typeof(PhotonManager), "OnPhotonRandomJoinFailed Can't join random room - Creating room");
+//        //    this.Host = true;
+//        //    PhotonNetwork.CreateRoom(null);
+//        //}
 
-           // this.photonView.RPC("AssignPaddle", player, tempPlayerView.viewID, tempPaddleView.viewID, (int)tempPaddleView.GetComponent<Paddle>().RowSide);
-        }
-        
-    }
-}
+//        //public override void OnJoinedRoom()
+//        //{
+//        //    LogHelper.Log(typeof(PhotonManager), "OnJoinedRoom : You have joined room : " + PhotonNetwork.room.name);
+//        //    if (PhotonNetwork.isMasterClient)
+//        //    {
+//        //        PhotonNetwork.Instantiate("AI_Boat_Mobile_Roeien", this.transform.position - new Vector3(0, 0, 10f), Quaternion.identity, 0);
+//        //    }
+
+//        //    EventHandler handler = this.OnJoinedRoomEvent;
+//        //    if (handler != null)
+//        //    {
+//        //        handler(this, EventArgs.Empty);
+//        //    }
+//        //}
+
+//        //public override void OnPhotonPlayerConnected(PhotonPlayer player)
+//        //{
+//        //    LogHelper.Log(typeof(PhotonManager), "Player connected");
+//        //    if (!PhotonNetwork.isMasterClient) return;
+
+
+
+//        //    this.photonView.RPC("AssignPaddle", player, tempPlayerView.viewID, tempPaddleView.viewID, (int)tempPaddleView.GetComponent<Paddle>().RowSide);
+//        //}
+
+//    }
+//}
