@@ -73,7 +73,10 @@ namespace Assets.Game_Jam_Menu_Template.Scripts
             this.showPanels.HideMenu ();
 
             //Load the selected scene, by scene index number in build settings
-            Application.LoadLevel (this.sceneToStart);
+			
+			LoadingScreenManager.LoadScene(2);
+			
+            //Application.LoadLevel (this.sceneToStart);
         }
 
 
