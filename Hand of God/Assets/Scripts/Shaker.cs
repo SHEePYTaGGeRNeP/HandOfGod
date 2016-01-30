@@ -56,7 +56,7 @@
                 return;
             cube.transform.GetComponent<Rigidbody>().isKinematic = false;
             cube.transform.GetComponent<MeshRenderer>().materials[0].color = Color.magenta;
-
+            cube.RemoveCubeFromConnected();
             if (Random.Range(1, 4) > 1)
             {
                 cube.transform.GetComponent<Rigidbody>().useGravity = true;

@@ -10,7 +10,17 @@
         {
             this.ConnectedCubes = new Dictionary<Side, Cube>();
         }
-
+        public void RemoveCube(Cube cube)
+        {
+            Side foundSide = Side.Back;
+            foreach (KeyValuePair<Side, Cube> kvp in this.ConnectedCubes)
+                if (kvp.Value == cube)
+                {
+                    foundSide = kvp.Key;
+                    break;
+                }
+            this.ConnectedCubes.Remove(foundSide);
+        }
         public void SetConnectedCubes()
         {
             UnityEngine.Ray ray = new UnityEngine.Ray(UnityEngine.Vector3.zero, UnityEngine.Vector3.zero);
@@ -23,6 +33,12 @@
                 if (hit.transform.tag == C.FLOOR_TAG)
                     this.ConnectedCubes.Add(side, hit.transform.GetComponent<Cube>());
             }
+        }
+
+        public void RemoveCubeFromConnected()
+        {
+            foreach (Cube c in this.ConnectedCubes.Values)
+                c.RemoveCube(this);
         }
 
         private void RayCheck(ref UnityEngine.Ray ray, ref Side side, int i)
