@@ -25,6 +25,8 @@
         private readonly HashSet<Cube> _iteratedCubes = new HashSet<Cube>();
         private readonly Queue<IterateCube> _toIterateCubes = new Queue<IterateCube>();
 
+        private const int _MAX_DISTANCE = 499;
+
         public void StartShake(Cube cube)
         {
             this._iteratedCubes.Clear();
@@ -41,14 +43,13 @@
         {
             if (this._iteratedCubes.Contains(cube)) return;
             this._iteratedCubes.Add(cube);
-            if (distance > 99) distance = 99;
+            if (distance > _MAX_DISTANCE) distance = _MAX_DISTANCE;
             RaycastHit hit;
             Ray ray = new Ray(cube.transform.position, new Vector3(0, 1, 0));
             Debug.DrawRay(cube.transform.position, ray.direction, Color.red, 3f);
             Physics.Raycast(ray, out hit);
             if (hit.collider != null && hit.transform.name == HandOfGod.Instance.transform.name)
                 distance = 0;
-
 
             cube.transform.GetComponent<MeshRenderer>().materials[0].color = Color.green;
             int result = Random.Range(1, 101);
